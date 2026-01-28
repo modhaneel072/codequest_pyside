@@ -1,7 +1,6 @@
-.venv/
+﻿.venv/
 __pycache__/
 *.pyc
-dist/
-build/
-*.spec
-src/data/progress.json
+.DS_Store
+.env
+.vscode/

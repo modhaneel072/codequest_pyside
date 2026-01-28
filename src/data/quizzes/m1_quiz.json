@@ -1,0 +1,11 @@
+﻿{
+  "title": "Module 1 Quiz: print() + variables",
+  "pass_score": 80,
+  "questions": [
+    {"prompt": "What does print(\"Hi\") do?", "choices": ["Stores text", "Displays Hi", "Creates a file"], "answer_index": 1},
+    {"prompt": "Which line correctly creates x with value 5?", "choices": ["x == 5", "x = 5", "int x = 5"], "answer_index": 1},
+    {"prompt": "What will this print?\n\nx = 2\nprint(x)\n", "choices": ["2", "x", "Nothing"], "answer_index": 0},
+    {"prompt": "Which is a string?", "choices": ["42", "\"42\"", "3.14"], "answer_index": 1},
+    {"prompt": "True or False: variables can change after you create them.", "choices": ["True", "False"], "answer_index": 0}
+  ]
+}

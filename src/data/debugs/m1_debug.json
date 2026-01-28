@@ -1,0 +1,11 @@
+﻿{
+  "title": "Debug Mission 1: Fix the Greeting",
+  "description_md": "## Mission\nThe system greeting script is broken. Fix it so it returns the correct message.\n\n### Goal\nWrite a function **greet(name)** that returns `\"Hello, <name>\"`.\n\n### Example\n- `greet(\"Neel\")` → `\"Hello, Neel\"`\n",
+  "required_function": "greet",
+  "mode": "return",
+  "broken_code": "def greet(name):\n    # BUG: missing comma/space\n    message = \"Hello\" + name\n    return message\n",
+  "tests": [
+    {"input": ["Neel"], "expected": "Hello, Neel"},
+    {"input": ["Ada"], "expected": "Hello, Ada"}
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "id": "m1_ps1",
+  "title": "Problem Set 1: Positive Checker",
+  "description_md": "## Problem\nWrite a function named **check_positive(x)** that returns **\"YES\"** if `x > 0` otherwise returns **\"NO\"**.\n\n### Requirements\n- Must be a function named `check_positive`\n- Must return a string\n- Don’t use loops yet\n",
+  "function": "check_positive",
+  "starter_code": "def check_positive(x):\n    # return \"YES\" if x > 0 else \"NO\"\n    pass\n",
+  "forbidden_keywords": ["for ", "while "],
+  "tests": [
+    {"input": [1], "expected": "YES"},
+    {"input": [-1], "expected": "NO"},
+    {"input": [0], "expected": "NO"}
+  ]
+}

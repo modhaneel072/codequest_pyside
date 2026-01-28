@@ -1,0 +1,12 @@
+﻿{
+  "id": "ps1_positive_checker",
+  "title": "Problem 1: Positive Checker",
+  "description_md": "## Problem 1: Positive Checker\n\nWrite a function named **check_positive(x)** that returns **\"YES\"** if `x > 0` otherwise returns **\"NO\"**.\n\n### Examples\n- `check_positive(3)` -> `\"YES\"`\n- `check_positive(-1)` -> `\"NO\"`\n- `check_positive(0)` -> `\"NO\"`\n\n### Requirements\n- Must be a function named `check_positive`\n- Must return a string\n",
+  "function": "check_positive",
+  "starter_code": "def check_positive(x):\n    # TODO: return \"YES\" if x > 0 else \"NO\"\n    pass\n",
+  "tests": [
+    {"input": [1], "expected": "YES"},
+    {"input": [-1], "expected": "NO"},
+    {"input": [0], "expected": "NO"}
+  ]
+}

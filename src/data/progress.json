@@ -1,0 +1,17 @@
+{
+  "last_route": "modules",
+  "unlocked_module": 1,
+  "completed": {
+    "modules": [],
+    "quizzes": [
+      "m1_quiz"
+    ],
+    "debugs": [],
+    "problemsets": [],
+    "hackathons": [],
+    "lessons": [
+      "m1_lesson"
+    ]
+  },
+  "hackathons_unlock_after_module": 3
+}
