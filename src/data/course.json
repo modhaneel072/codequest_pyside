@@ -1,0 +1,70 @@
+{
+  "title": "CodeQuest Beginner Python",
+  "modules": [
+    {
+      "id": "m1",
+      "title": "Module 1 — Python Basics (print, strings, variables)",
+      "objective": "Read specs carefully. Use print(), strings, and variables correctly.",
+      "hack_prompt": "SYSTEM BREACH STAGE 1: Gain access by proving you can print exact output and fix basic syntax issues.",
+      "sections": ["What is print()", "Strings", "Variables", "Exact output", "Mini practice"],
+      "lesson_html": "<h1>Module 1: Python Basics</h1><p>This module teaches the foundations: <b>print</b>, <b>strings</b>, and <b>variables</b>.</p><h2>What is <code>print()</code>?</h2><p><code>print()</code> outputs text to the screen.</p><pre><code>print('Hello, Python!')</code></pre><p><b>Important:</b> many assignments are auto-graded. Output must match <i>exactly</i> (spaces, punctuation, newlines).</p><h2>Strings</h2><p>A <b>string</b> is text inside quotes:</p><pre><code>name = 'Ada'\nprint(name)</code></pre><h2>Variables</h2><p>Variables store values for later use.</p><pre><code>x = 5\nx = x + 2\nprint(x)</code></pre><h2>Mini practice</h2><ul><li>Make it print exactly: <code>Hello, Python!</code></li><li>Store a name, then print it</li></ul>",
+      "starter_task": "Practice print + strings. Make the output match EXACTLY.",
+      "examples": [
+        { "title": "Example: print()", "code": "print('Hello, Python!')\n", "task": "Run it. Then change the text and run again." },
+        { "title": "Example: variables", "code": "x = 5\nx += 2\nprint(x)\n", "task": "Run it. Then change 5 to another number." }
+      ],
+      "quiz": {
+        "mcq": [
+          { "question": "What does this print?\nprint('Hi')", "choices": ["Hi", "hi", "print('Hi')", "(nothing)"], "correct_index": 0 },
+          { "question": "Which variable name is valid in Python?", "choices": ["2name", "my-name", "my_name", "my name"], "correct_index": 2 }
+        ],
+        "frq": {
+          "prompt": "This code throws a syntax error. Briefly explain the error and provide the corrected code.",
+          "broken_code": "print(\"Hello)\n",
+          "keywords": ["syntax", "quote", "string", "missing", "closed", "unterminated"],
+          "expected_fix_contains": ["print(\"hello\")", "print('hello')"]
+        }
+      },
+      "error_pack": [
+        { "code": "print('Hello)", "error": "SyntaxError: unterminated string literal", "why": "Python started reading a string but never found a matching closing quote." },
+        { "code": "Print('Hi')", "error": "NameError: name 'Print' is not defined", "why": "Python is case-sensitive. The function is print(), not Print()." },
+        { "code": "name = Ada\nprint(name)", "error": "NameError: name 'Ada' is not defined", "why": "Without quotes, Python treats Ada like a variable name." },
+        { "code": "x = 5\nprint(y)", "error": "NameError: name 'y' is not defined", "why": "You printed a variable that was never created." },
+        { "code": "x = '5'\nprint(x + 1)", "error": "TypeError: can only concatenate str (not \"int\") to str", "why": "You can’t add an int to a string without converting types." }
+      ]
+    },
+    {
+      "id": "m2",
+      "title": "Module 2 — Conditionals and Loops (if, for, while)",
+      "objective": "Use conditionals and loops to control program flow.",
+      "hack_prompt": "SYSTEM BREACH STAGE 2: Automate the breach using loops and unlock deeper directories.",
+      "sections": ["if statements", "for loops", "while loops", "Indentation", "Common mistakes", "Mini practice"],
+      "lesson_html": "<h1>Module 2: Conditionals and Loops</h1><p>This module teaches how to make programs <b>decide</b> (if) and <b>repeat</b> (loops).</p><h2>1) <code>if</code> statements (decision making)</h2><p>An <code>if</code> statement runs code <b>only if</b> a condition is true.</p><p><b>Syntax:</b></p><pre><code>if condition:\n    # indented block</code></pre><p><b>Key rules:</b></p><ul><li>You must end the <code>if</code> line with a colon <code>:</code></li><li>You must indent the block underneath</li></ul><pre><code>x = 10\nif x &gt; 5:\n    print('x is big')</code></pre><h2>2) <code>for</code> loops (repeat a known number of times)</h2><p><code>range(n)</code> produces 0 up to n-1.</p><pre><code>for i in range(3):\n    print(i)</code></pre><p>Output:</p><pre><code>0\n1\n2</code></pre><h2>3) <code>while</code> loops (repeat until the condition becomes false)</h2><p>Use <code>while</code> when you don’t know how many repeats you need.</p><pre><code>i = 0\nwhile i &lt; 3:\n    print(i)\n    i += 1</code></pre><p><b>Warning:</b> if you never change <code>i</code>, the loop may run forever.</p><h2>Indentation matters</h2><p>Python uses indentation to group code. If indentation is wrong, you get <b>IndentationError</b> or logic bugs.</p><h2>Mini practice</h2><ol><li>Write an if statement that prints <code>YES</code> when a number is greater than 0.</li><li>Write a for loop that prints 0..4.</li><li>Write a while loop that prints 5..1.</li></ol>",
+      "starter_task": "Write an if statement that prints YES when x > 0. Then test it with x = 1 and x = -1.",
+      "examples": [
+        { "title": "Example: if + colon + indent", "code": "x = 10\nif x > 5:\n    print('x is big')\n", "task": "Run it. Then change x to 3. What happens?" },
+        { "title": "Example: for loop range()", "code": "for i in range(5):\n    print(i)\n", "task": "Run it. Then change 5 to 2. Then 10." },
+        { "title": "Example: while loop (safe)", "code": "i = 3\nwhile i > 0:\n    print(i)\n    i -= 1\n", "task": "Run it. Then remove i -= 1 and see why it's dangerous." }
+      ],
+      "quiz": {
+        "mcq": [
+          { "question": "What is printed?\nfor i in range(2):\n    print(i)", "choices": ["0 1", "1 2", "2 3", "(nothing)"], "correct_index": 0 },
+          { "question": "Which condition is True?", "choices": ["3 < 2", "2 == 2", "5 != 5", "10 < 1"], "correct_index": 1 }
+        ],
+        "frq": {
+          "prompt": "This code throws a syntax error. Briefly explain it and provide the corrected code.",
+          "broken_code": "if 3 < 10\n    print('YES')\n",
+          "keywords": ["colon", ":", "if", "syntax"],
+          "expected_fix_contains": ["if 3 < 10:", "if(3 < 10):"]
+        }
+      },
+      "error_pack": [
+        { "code": "if 3 < 10\n    print('YES')", "error": "SyntaxError: expected ':'", "why": "Python requires ':' to start an indented block. Without it, Python can’t parse the statement." },
+        { "code": "for i range(3):\n    print(i)", "error": "SyntaxError: invalid syntax", "why": "A for loop needs 'in': for i in range(3):" },
+        { "code": "i = 0\nwhile i < 3:\n    print(i)", "error": "Infinite loop (logic error)", "why": "i never changes, so the condition stays true forever." },
+        { "code": "for i in range(3):\nprint(i)", "error": "IndentationError", "why": "The loop body must be indented under the for statement." },
+        { "code": "x = 10\nif x = 10:\n    print('YES')", "error": "SyntaxError (assignment in condition)", "why": "Use '==' for comparison. '=' assigns a value and isn’t valid here." }
+      ]
+    }
+  ]
+}
