@@ -19,7 +19,7 @@ class ProblemSetPage(QWidget):
         root = QVBoxLayout(self)
         header = QHBoxLayout()
 
-        back_btn = QPushButton("← Back")
+        back_btn = QPushButton("Back")
         back_btn.clicked.connect(self.nav.go_back)
 
         title = QLabel(self.spec.get("title","Problem Sets"))

@@ -1,1 +1,3 @@
-PySide6
+PySide6>=6.5.0
+# For production stability, use specific versions:
+# PySide6==6.5.0

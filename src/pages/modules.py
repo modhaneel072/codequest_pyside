@@ -11,7 +11,7 @@ class ModulesPage(QWidget):
         root = QVBoxLayout(self)
         top = QHBoxLayout()
 
-        back = QPushButton("← Back")
+        back = QPushButton("Back")
         back.clicked.connect(self.nav.go_back)
 
         title = QLabel("Modules (W3Schools pace)")

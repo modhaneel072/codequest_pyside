@@ -1,0 +1,28 @@
+{
+  "app": {
+    "title": "CodeQuest",
+    "version": "1.0.0",
+    "window_width": 1200,
+    "window_height": 760
+  },
+  "code_execution": {
+    "timeout_seconds": 2.0,
+    "max_output_length": 5000
+  },
+  "grading": {
+    "passing_score": 90,
+    "mcq_points": 40,
+    "total_points": 100
+  },
+  "data": {
+    "lessons_dir": "src/data/lessons",
+    "problems_dir": "src/data/problems",
+    "quizzes_dir": "src/data/quizzes",
+    "debugs_dir": "src/data/debugs"
+  },
+  "logging": {
+    "level": "INFO",
+    "enable_file_logging": true,
+    "log_file": "logs/codequest.log"
+  }
+}

@@ -17,7 +17,7 @@ class QuizPage(QWidget):
         root = QVBoxLayout(self)
 
         top = QHBoxLayout()
-        back = QPushButton("← Back")
+        back = QPushButton("Back")
         back.clicked.connect(self.nav.go_back)
         title = QLabel(self.spec.get("title", "Quiz"))
         title.setStyleSheet("font-size:18px; font-weight:800;")

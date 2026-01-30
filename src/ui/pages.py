@@ -33,9 +33,9 @@ class LessonPage(QWidget):
 
         # Top nav (full width)
         nav = QHBoxLayout()
-        self.back_btn = QPushButton("â† Back")
+        self.back_btn = QPushButton("Back")
         self.back_btn.clicked.connect(self._on_back)
-        self.menu_btn = QPushButton("ðŸ  Menu")
+        self.menu_btn = QPushButton("Menu")
         self.menu_btn.clicked.connect(self._on_menu)
 
         self.title = QLabel("Lesson")
@@ -48,7 +48,7 @@ class LessonPage(QWidget):
         nav.addWidget(self.title)
         nav.addStretch(1)
 
-        self.next_btn = QPushButton("Take Quiz â†’")
+        self.next_btn = QPushButton("Take Quiz")
         self.next_btn.setObjectName("Primary")
         self.next_btn.clicked.connect(self._on_next)
         nav.addWidget(self.next_btn)
@@ -77,7 +77,7 @@ class LessonPage(QWidget):
         self.example_box = QComboBox()
         left_l.addWidget(self.example_box)
 
-        self.load_example_btn = QPushButton("Load Example â†’ Editor")
+        self.load_example_btn = QPushButton("Load Example")
         self.load_example_btn.clicked.connect(self.load_selected_example)
         left_l.addWidget(self.load_example_btn)
 
@@ -104,7 +104,7 @@ class LessonPage(QWidget):
         hdr.addWidget(QLabel("Try it (Sandbox)"))
         hdr.addStretch(1)
 
-        self.run_btn = QPushButton("Run â–¶")
+        self.run_btn = QPushButton("Run")
         self.run_btn.setObjectName("Primary")
         self.run_btn.clicked.connect(self.run_code)
         hdr.addWidget(self.run_btn)
@@ -221,9 +221,9 @@ class QuizPage(QWidget):
         lay.setSpacing(12)
 
         nav = QHBoxLayout()
-        back = QPushButton("â† Back")
+        back = QPushButton("Back")
         back.clicked.connect(self._on_back)
-        menu = QPushButton("ðŸ  Menu")
+        menu = QPushButton("Menu")
         menu.clicked.connect(self._on_menu)
         nav.addWidget(back)
         nav.addWidget(menu)
@@ -354,9 +354,9 @@ class DebugPage(QWidget):
         lay.setSpacing(10)
 
         nav = QHBoxLayout()
-        back = QPushButton("â† Back")
+        back = QPushButton("Back")
         back.clicked.connect(self._on_back)
-        menu = QPushButton("ðŸ  Menu")
+        menu = QPushButton("Menu")
         menu.clicked.connect(self._on_menu)
         nav.addWidget(back)
         nav.addWidget(menu)
@@ -378,18 +378,18 @@ class DebugPage(QWidget):
         self.explain.setMinimumHeight(240)
 
         btns = QHBoxLayout()
-        self.mark_btn = QPushButton("Mark understood âœ“")
+        self.mark_btn = QPushButton("Mark Understood")
         self.mark_btn.setObjectName("Primary")
         self.mark_btn.clicked.connect(self.mark_understood)
 
-        self.next_btn = QPushButton("Next error â†’")
+        self.next_btn = QPushButton("Next Error")
         self.next_btn.clicked.connect(self.next_error)
 
         btns.addWidget(self.mark_btn)
         btns.addWidget(self.next_btn)
         btns.addStretch(1)
 
-        self.done_btn = QPushButton("Go to Hack Terminal â†’ (locked)")
+        self.done_btn = QPushButton("Go to Hack Terminal (locked)")
         self.done_btn.setEnabled(False)
         self.done_btn.clicked.connect(self._on_done)
 
@@ -418,12 +418,12 @@ class DebugPage(QWidget):
         self.i = 0
         self.understood = set()
         self.done_btn.setEnabled(False)
-        self.done_btn.setText("Go to Hack Terminal â†’ (locked)")
+        self.done_btn.setText("Go to Hack Terminal (locked)")
         self.render()
 
     def render(self):
         total = len(self.items)
-        self.progress.setText(f"Completed: {len(self.understood)}/{total} â€¢ Viewing error {self.i+1}/{total}")
+        self.progress.setText(f"Completed: {len(self.understood)}/{total} | Viewing error {self.i+1}/{total}")
 
         e = self.items[self.i]
         self.code.setPlainText(e.get("code", ""))
@@ -431,11 +431,11 @@ class DebugPage(QWidget):
 
         already = self.i in self.understood
         self.mark_btn.setEnabled(not already)
-        self.mark_btn.setText("Mark understood âœ“" if not already else "Understood âœ“")
+        self.mark_btn.setText("Mark Understood" if not already else "Understood")
 
         if len(self.understood) == total:
             self.done_btn.setEnabled(True)
-            self.done_btn.setText("Go to Hack Terminal â†’")
+            self.done_btn.setText("Go to Hack Terminal")
 
     def mark_understood(self):
         self.understood.add(self.i)
@@ -466,9 +466,9 @@ class TerminalPage(QWidget):
         lay.setSpacing(10)
 
         nav = QHBoxLayout()
-        back = QPushButton("â† Back")
+        back = QPushButton("Back")
         back.clicked.connect(self._on_back)
-        menu = QPushButton("ðŸ  Menu")
+        menu = QPushButton("Menu")
         menu.clicked.connect(self._on_menu)
         nav.addWidget(back)
         nav.addWidget(menu)
@@ -485,7 +485,7 @@ class TerminalPage(QWidget):
 
         row = QHBoxLayout()
         self.prompt = QLineEdit()
-        self.prompt.setPlaceholderText("Type commandâ€¦ (try: help, objective)")
+        self.prompt.setPlaceholderText("Type command... (try: help, objective)")
         self.run_btn = QPushButton("Run")
         self.run_btn.setObjectName("Primary")
         self.run_btn.clicked.connect(self.run_command)
@@ -494,7 +494,7 @@ class TerminalPage(QWidget):
 
         bottom = QHBoxLayout()
         bottom.addStretch(1)
-        self.next_btn = QPushButton("Next Module â†’")
+        self.next_btn = QPushButton("Next Module")
         self.next_btn.clicked.connect(self._on_next_module)
         bottom.addWidget(self.next_btn)
 
@@ -614,7 +614,7 @@ class ChallengePage(QWidget):
         hdr = QHBoxLayout()
         hdr.addWidget(QLabel("Editor"))
         hdr.addStretch(1)
-        self.run_btn = QPushButton("Run + Grade ▶")
+        self.run_btn = QPushButton("Run + Grade")
         self.run_btn.setObjectName("Primary")
         self.run_btn.clicked.connect(self.run_and_grade)
         hdr.addWidget(self.run_btn)
@@ -683,12 +683,12 @@ class ChallengePage(QWidget):
         out += "=== AUTOGRADER ===\n" + r.feedback + "\n"
 
         if r.passed:
-            out = "✅ PASS\n\n" + out
+            out = "[PASS]\n\n" + out
             self.cont_btn.setEnabled(True)
-            self.cont_btn.setText("Continue to Hackathon →")
+            self.cont_btn.setText("Continue to Hackathon")
         else:
-            out = "❌ NOT PASSED\n\n" + out
+            out = "[NOT PASSED]\n\n" + out
             self.cont_btn.setEnabled(False)
-            self.cont_btn.setText("Continue to Hackathon → (locked)")
+            self.cont_btn.setText("Continue to Hackathon (locked)")
 
         self.feedback.setPlainText(out)

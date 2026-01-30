@@ -1,5 +1,5 @@
 {
-  "last_route": "modules",
+  "last_route": "boot",
   "unlocked_module": 1,
   "completed": {
     "modules": [],
@@ -13,5 +13,12 @@
       "m1_lesson"
     ]
   },
-  "hackathons_unlock_after_module": 3
+  "hackathons_unlock_after_module": 3,
+  "history": [
+    {
+      "module_index": 0,
+      "score": 80,
+      "ts": "2026-01-30T14:14:16"
+    }
+  ]
 }

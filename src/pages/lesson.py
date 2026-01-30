@@ -12,7 +12,7 @@ class LessonPage(QWidget):
         root = QVBoxLayout(self)
         top = QHBoxLayout()
 
-        back = QPushButton("â† Back")
+        back = QPushButton("Back")
         back.clicked.connect(self.nav.go_back)
 
         title = QLabel(f"Module {module_id} Lesson")
@@ -25,7 +25,7 @@ class LessonPage(QWidget):
         self.body.setMarkdown(self._lesson_markdown(module_id))
         root.addWidget(self.body)
 
-        next_btn = QPushButton("Continue â†’ Quiz")
+        next_btn = QPushButton("Continue to Quiz")
         next_btn.setMinimumHeight(44)
         next_btn.clicked.connect(self.complete_lesson)
         root.addWidget(next_btn)

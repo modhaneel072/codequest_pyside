@@ -21,11 +21,11 @@ class BootMenu(QWidget):
         lay.addWidget(title)
         lay.addStretch()
 
-        lay.addWidget(btn("▶ Start / Continue Course", start_course))
-        lay.addWidget(btn("📘 Review Lessons", review))
-        lay.addWidget(btn("🧠 Course Progress", progress))
-        lay.addWidget(btn("🖥 Hackathon Progress", hack_progress))
-        lay.addWidget(btn("⚙ Settings", settings))
-        lay.addWidget(btn("❌ Exit", exit_app))
+        lay.addWidget(btn("Start / Continue Course", start_course))
+        lay.addWidget(btn("Review Lessons", review))
+        lay.addWidget(btn("Course Progress", progress))
+        lay.addWidget(btn("Hackathon Progress", hack_progress))
+        lay.addWidget(btn("Settings", settings))
+        lay.addWidget(btn("Exit", exit_app))
 
         lay.addStretch()

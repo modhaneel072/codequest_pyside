@@ -3,7 +3,7 @@
   "modules": [
     {
       "id": "m1",
-      "title": "Module 1 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Python Basics (print, strings, variables)",
+      "title": "Module 1 - Python Basics (print, strings, variables)",
       "objective": "Read specs carefully. Use print(), strings, and variables correctly.",
       "hack_prompt": "SYSTEM BREACH STAGE 1: Gain access by proving you can print exact output and fix basic syntax issues.",
       "sections": [
@@ -91,11 +91,11 @@
         {
           "code": "x = '5'\nprint(x + 1)",
           "error": "TypeError: can only concatenate str (not \"int\") to str",
-          "why": "You canÃ¢â‚¬â„¢t add an int to a string without converting types."
+          "why": "You can't add an int to a string without converting types."
         }
       ],
       "coding_challenge": {
-        "title": "Challenge 1 Ã¢â‚¬â€ Exact Output + Variables",
+        "title": "Challenge 1 - Exact Output + Variables",
         "description_html": "<h2>Your task</h2><p>Write code that:</p><ol><li>Sets <code>x = 10</code></li><li>Adds <code>5</code> to <code>x</code></li><li>Prints exactly: <code>Result: 15</code></li></ol><p><b>Important:</b> output must match exactly.</p>",
         "starter_code": "# Goal: print exactly 'Result: 15'\n# HINT: x += 5\n\n# TYPE YOUR SOLUTION BELOW\n",
         "pass_score": 90,
@@ -110,7 +110,7 @@
     },
     {
       "id": "m2",
-      "title": "Module 2 ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Conditionals and Loops (if, for, while)",
+      "title": "Module 2 - Conditionals and Loops (if, for, while)",
       "objective": "Use conditionals and loops to control program flow.",
       "hack_prompt": "SYSTEM BREACH STAGE 2: Automate the breach using loops and unlock deeper directories.",
       "sections": [
@@ -121,7 +121,7 @@
         "Common mistakes",
         "Mini practice"
       ],
-      "lesson_html": "<h1>Module 2: Conditionals and Loops</h1><p>This module teaches how to make programs <b>decide</b> (if) and <b>repeat</b> (loops).</p><h2>1) <code>if</code> statements (decision making)</h2><p>An <code>if</code> statement runs code <b>only if</b> a condition is true.</p><p><b>Syntax:</b></p><pre><code>if condition:\n    # indented block</code></pre><p><b>Key rules:</b></p><ul><li>You must end the <code>if</code> line with a colon <code>:</code></li><li>You must indent the block underneath</li></ul><pre><code>x = 10\nif x &gt; 5:\n    print('x is big')</code></pre><h2>2) <code>for</code> loops (repeat a known number of times)</h2><p><code>range(n)</code> produces 0 up to n-1.</p><pre><code>for i in range(3):\n    print(i)</code></pre><p>Output:</p><pre><code>0\n1\n2</code></pre><h2>3) <code>while</code> loops (repeat until the condition becomes false)</h2><p>Use <code>while</code> when you donÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢t know how many repeats you need.</p><pre><code>i = 0\nwhile i &lt; 3:\n    print(i)\n    i += 1</code></pre><p><b>Warning:</b> if you never change <code>i</code>, the loop may run forever.</p><h2>Indentation matters</h2><p>Python uses indentation to group code. If indentation is wrong, you get <b>IndentationError</b> or logic bugs.</p><h2>Mini practice</h2><ol><li>Write an if statement that prints <code>YES</code> when a number is greater than 0.</li><li>Write a for loop that prints 0..4.</li><li>Write a while loop that prints 5..1.</li></ol>",
+      "lesson_html": "<h1>Module 2: Conditionals and Loops</h1><p>This module teaches how to make programs <b>decide</b> (if) and <b>repeat</b> (loops).</p><h2>1) <code>if</code> statements (decision making)</h2><p>An <code>if</code> statement runs code <b>only if</b> a condition is true.</p><p><b>Syntax:</b></p><pre><code>if condition:\n    # indented block</code></pre><p><b>Key rules:</b></p><ul><li>You must end the <code>if</code> line with a colon <code>:</code></li><li>You must indent the block underneath</li></ul><pre><code>x = 10\nif x &gt; 5:\n    print('x is big')</code></pre><h2>2) <code>for</code> loops (repeat a known number of times)</h2><p><code>range(n)</code> produces 0 up to n-1.</p><pre><code>for i in range(3):\n    print(i)</code></pre><p>Output:</p><pre><code>0\n1\n2</code></pre><h2>3) <code>while</code> loops (repeat until the condition becomes false)</h2><p>Use <code>while</code> when you don't know how many repeats you need.</p><pre><code>i = 0\nwhile i &lt; 3:\n    print(i)\n    i += 1</code></pre><p><b>Warning:</b> if you never change <code>i</code>, the loop may run forever.</p><h2>Indentation matters</h2><p>Python uses indentation to group code. If indentation is wrong, you get <b>IndentationError</b> or logic bugs.</p><h2>Mini practice</h2><ol><li>Write an if statement that prints <code>YES</code> when a number is greater than 0.</li><li>Write a for loop that prints 0..4.</li><li>Write a while loop that prints 5..1.</li></ol>",
       "starter_task": "Write an if statement that prints YES when x > 0. Then test it with x = 1 and x = -1.",
       "examples": [
         {
@@ -182,7 +182,7 @@
         {
           "code": "if 3 < 10\n    print('YES')",
           "error": "SyntaxError: expected ':'",
-          "why": "Python requires ':' to start an indented block. Without it, Python canÃ¢â‚¬â„¢t parse the statement."
+          "why": "Python requires ':' to start an indented block. Without it, Python can't parse the statement."
         },
         {
           "code": "for i range(3):\n    print(i)",
@@ -202,11 +202,11 @@
         {
           "code": "x = 10\nif x = 10:\n    print('YES')",
           "error": "SyntaxError (assignment in condition)",
-          "why": "Use '==' for comparison. '=' assigns a value and isnÃ¢â‚¬â„¢t valid here."
+          "why": "Use '==' for comparison. '=' assigns a value and isn't valid here."
         }
       ],
       "coding_challenge": {
-        "title": "Challenge 1 Ã¢â‚¬â€ Exact Output + Variables",
+        "title": "Challenge 1 - Exact Output + Variables",
         "description_html": "<h2>Your task</h2><p>Write code that:</p><ol><li>Sets <code>x = 10</code></li><li>Adds <code>5</code> to <code>x</code></li><li>Prints exactly: <code>Result: 15</code></li></ol><p><b>Important:</b> output must match exactly.</p>",
         "starter_code": "# Goal: print exactly 'Result: 15'\n# HINT: x += 5\n\n# TYPE YOUR SOLUTION BELOW\n",
         "pass_score": 90,
